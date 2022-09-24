@@ -1,0 +1,77 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+body {
+    background: linear-gradient(gray, white);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+    background-color: #101010e3;
+    margin: 0;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 5%;
+    background: linear-gradient(to right, #034663, #218E96);
+    animation: loading 1.8s linear infinite;
+}
+
+h5{
+    margin: 0;
+}
+
+@keyframes loading {
+    25% {
+        width: 25%;
+    }
+
+    35% {
+        width: 35%;
+    }
+
+    45% {
+        width: 45%;
+    }
+
+    55% {
+        width: 55%;
+    }
+
+    65% {
+        width: 65%;
+    }
+
+    75% {
+        width: 75%;
+    }
+
+    85% {
+        width: 85%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
